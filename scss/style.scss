@@ -1,0 +1,64 @@
+@charset "UTF-8";
+/* SASS Document */
+
+/*=============================================== Imports ===============================================*/
+
+@import "mixins";
+@import "reset";
+@import "variables";
+
+/*=============================================== General ===============================================*/
+
+* {
+    transition: all 1s;
+    outline: none;
+}
+
+body {
+    padding: 10px;
+    background-color: lightseagreen;
+}
+
+section {
+    display: flex;
+    flex-direction: row;
+}
+
+img {
+    width: 50px;
+}
+
+#cart {
+    background-color: salmon;
+}
+
+#cart,
+#items {
+    width: 50vw;
+}
+
+h1 {
+    color: #7c32ff;
+}
+
+p {
+    color: green;
+    text-decoration: line-through;
+}
+
+#two {
+    background-color: rebeccapurple;
+}
+
+.example {
+    border: 5px dashed purple;
+    margin: 5px;
+}
+
+/*=============================================== Components ===============================================*/
+
+/*=============================================== Pages ===============================================*/
+
+/*=============================================== Helpers ===============================================*/
+
+@import "helpers";
