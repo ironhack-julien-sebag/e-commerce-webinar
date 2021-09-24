@@ -14,46 +14,102 @@
     outline: none;
 }
 
-body {
-    padding: 10px;
-    background-color: lightseagreen;
-}
-
 section {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 48px;
+    padding: 48px;
 }
 
-img {
-    width: 50px;
+h2 {
+    margin-bottom: 24px;
 }
 
+#items,
 #cart {
-    background-color: salmon;
+    @include ulNone();
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+
+    li {
+        width: 100%;
+        border: 1px solid lightgray;
+        border-radius: 12px;
+        padding: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        img {
+            object-fit: contain;
+            $size: 200px;
+            width: $size;
+            height: $size;
+            margin-right: 16px;
+        }
+
+        .content {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 16px;
+
+            .price {
+                text-transform: capitalize;
+            }
+
+            input, button {
+                justify-self: start;
+            }
+        }
+    }
 }
 
-#cart,
-#items {
-    width: 50vw;
+.name {
+    font-size: 20px;
+    font-weight: bold;
 }
 
-h1 {
-    color: #7c32ff;
-}
+// body {
+//     padding: 10px;
+//     background-color: lightseagreen;
+// }
 
-p {
-    color: green;
-    text-decoration: line-through;
-}
+// section {
+//     display: flex;
+//     flex-direction: row;
+// }
 
-#two {
-    background-color: rebeccapurple;
-}
+// img {
+//     width: 50px;
+// }
 
-.example {
-    border: 5px dashed purple;
-    margin: 5px;
-}
+// #cart {
+//     background-color: salmon;
+// }
+
+// #cart,
+// #items {
+//     width: 50vw;
+// }
+
+// h1 {
+//     color: #7c32ff;
+// }
+
+// p {
+//     color: green;
+//     text-decoration: line-through;
+// }
+
+// #two {
+//     background-color: rebeccapurple;
+// }
+
+// .example {
+//     border: 5px dashed purple;
+//     margin: 5px;
+// }
 
 /*=============================================== Components ===============================================*/
 
